@@ -4,6 +4,7 @@
 # Import des bibliotheques
 import xml.etree.ElementTree as ET # Pour le parsing du XML
 import ManipulationFichiers # Pour la manipulation des fichiers
+import ManipulationURL # Pour la manipulation des URLs
 import Parametres # Definit les parametres generaux
 
 # Pour calculer la durée de l'exécution
@@ -29,6 +30,8 @@ for child in root:
 		# Si nom n'est pas None, on l'affiche
 		if(nom is not None):
 			print(nom)
+
+print(ManipulationURL.URLOnline("google.fr"))
 
 ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE)
 ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE[:-4])

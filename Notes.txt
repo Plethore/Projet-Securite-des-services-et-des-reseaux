@@ -1,0 +1,16 @@
+Format des données = Fichier json PAS D’XML !!! :
+{"path" :"/backup", "software" ["default", "cpe:2.4:wordpress:wordpress:2.4.4", …"}
+
+Sur Linux, commande jq pour manipuler les fichiers json (ex : cat file.json | jq .)
+Sur Github, Tachyon = Logiciel pour bruteforcer les URL => A regarder, éventuellement exploiter ce qu’il a fait
+
+Récupérer les cpe à l’aide de l’API pour les réinjecter dans les fichier json
+
+Exemples :
+https://cve.circl.lu/api/search/9gag/9gag_-_funny_pics_and_videos
+https://cve.circl.lu/api/search/wordpress/captcha
+
+Faire 1 fichier par logiciel : Un pour wordpress, un pour joomla, …
+
+Pour ce qu’est un CPE :
+https://nvd.nist.gov/cpe.cfm
