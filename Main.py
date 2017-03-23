@@ -2,39 +2,31 @@
 # coding = utf-8
 
 # Import des bibliotheques
-import xml.etree.ElementTree as ET # Pour le parsing du XML
 import ManipulationFichiers # Pour la manipulation des fichiers
 import ManipulationURL # Pour la manipulation des URLs
-import Parametres # Definit les parametres generaux
+import Parametres # On importe le fichier qui contient les parametres
 
 # Pour calculer la durée de l'exécution
-import time 
-temps=time.time()
+import time
+temps = time.time()
 
-# Téléchargement du fichier des CPE
-ManipulationFichiers.Telecharger(Parametres.url, Parametres.fichierCPE)
-# On dézipe le fichier
-ManipulationFichiers.Unzip(Parametres.fichierCPE)
+# Téléchargement du fichier des CPE et on le dézipe
+#ManipulationFichiers.TelechargerFichierCPE()
+#ManipulationFichiers.UnzipFichierCPE()
 
-# On parse le fichier
-tree = ET.parse(Parametres.fichierCPE[:-4])
-root = tree.getroot()
-#print(root.tag)
+#listeNoms = ManipulationFichiers.GetNomsCPE(Parametres.fichierCPE[:-4])
+#for nom in listeNoms:
+#	if(nom.find("wordpress") != -1):
+#		print(nom)
 
-# Parcours des cpe-item
-for child in root:
-	# Parcours des noeuds des cpe-item
-	for littlechild in child:
-		# On récupère la balise name
-		nom = littlechild.attrib.get('name')
-		# Si nom n'est pas None, on l'affiche
-		if(nom is not None):
-			print(nom)
+liste = ManipulationURL.GetListePath()
+for path in liste:
+	print(Parametres.siteCible + path)
+	print(ManipulationURL.URLOnline(Parametres.siteCible + path))
 
-print(ManipulationURL.URLOnline("google.fr"))
-
-ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE)
-ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE[:-4])
+# Suppression des fichiers
+#ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE)
+#ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE[:-4])
 
 # Calcul de la durée du programme
 print("Temps d'execution = ", time.time() - temps)
