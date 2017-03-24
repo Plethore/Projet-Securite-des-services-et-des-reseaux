@@ -3,7 +3,8 @@
 
 # On definit le site web visé
 #siteCible = "http://www.feralco.fr"
-siteCible = "www.youtube.com"
+siteCible1 = "https://blogs.faz.net" # site wordpress
+siteCible2 = "www.joomla.org" # site joomla
 
 # On définit le nom du fichier a telecharger 
 fichierCPE = 'official-cpe-dictionary_v2.3.xml.zip'

@@ -21,8 +21,10 @@ temps = time.time()
 
 liste = ManipulationURL.GetListePath()
 for path in liste:
-	print(Parametres.siteCible + path)
-	print(ManipulationURL.URLOnline(Parametres.siteCible + path))
+	print(Parametres.siteCible1 + path)
+	print(ManipulationURL.URLOnline(Parametres.siteCible1 + path))
+	print(Parametres.siteCible2 + path)
+	print(ManipulationURL.URLOnline(Parametres.siteCible2 + path))
 
 # Suppression des fichiers
 #ManipulationFichiers.SupprimerFichier(Parametres.fichierCPE)
