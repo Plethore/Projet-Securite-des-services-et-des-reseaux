@@ -1,1 +1,1 @@
-{"path": "/wp-admin/", "software": ["default", "cpe:2.4:wordpress:wordpress:2.4.4", "wordpress"]}
+{"path": "wp-admin/", "software": ["default", "cpe:2.4:wordpress:wordpress:2.4.4", "wordpress"]}
