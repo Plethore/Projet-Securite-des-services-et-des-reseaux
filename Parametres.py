@@ -3,7 +3,7 @@
 
 # On definit le site web visé
 #siteCible = "http://www.feralco.fr"
-siteCible1 = "https://blogs.faz.net" # site wordpress
+siteCible1 = "https://fr.wordpress.org/" # site wordpress
 siteCible2 = "www.joomla.org" # site joomla
 
 # On définit le nom du fichier a telecharger 

@@ -58,8 +58,9 @@ def GetListeFichiers():
 		donnees = json.load(dataFile)
 	return donnees["files"]
 
-
-
+# On trie le fichier et on ne garde que les lignes uniques
+def FileSortUnique(nomFichier):
+	os.system("sort -u " + nomFichier + " -o " + nomFichier)
 
 
 
